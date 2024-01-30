@@ -450,8 +450,68 @@ option{
 }
 
 .footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 8px;
     background-color: #000000;
     width: 100%;
     height: 400px;
+}
+
+.kk{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 150px;
+    margin-left: -230px;
+    cursor: pointer;
+}
+
+.kk .block1 p,
+.kk .block2 p,
+.kk .block3 p,
+.kk .block4 p {
+    margin-bottom: 20px;
+}
+
+.size-up{
+    font-size: 16px;
+}
+
+.block1,
+.block2, 
+.block3,
+.block4{
+    font-size: 14px;
+    text-decoration: underline;
+    color: #b1b1b1;
+}
+
+.low-select{
+    margin-top: -15px;
+    margin-left: -1103px;
+    border-radius: 3px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    width: 130px;
+    height: 30px;
+    background: transparent;
+}
+
+.low-option{
+    background:white;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+}
+
+.low-text{
+    color: #b1b1b1;
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: -1135px;
 }
