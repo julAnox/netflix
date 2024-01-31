@@ -100,8 +100,16 @@ option{
 .low {
     position: absolute;
     top: calc(39% + 100px); 
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center; 
+}
+
+.low-email {
+    top: calc(39% + 3370px); 
+    
+    
     display: flex;
     flex-direction: row; 
     align-items: center;
@@ -119,26 +127,29 @@ option{
     text-align: left;
     padding: 10px;
     font-size: 17px;
-    text-align: left;
-    transition: ease all 0.5s;
     position: relative;
 }
 
-.input-1::placeholder {
-    color: rgb(184, 184, 184);
-    font-size: 15px;
-    transition: ease all 0.5s;
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
- 
+.input1:focus ~ .floating-label,
+.input1:not(:focus):valid ~ .floating-label{
+  top: 8px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
 }
 
-.input-1:focus::placeholder {
+.floating-label {
     color: rgb(184, 184, 184);
-    transform: translateY(-150%) scale(0.9);
-    text-align: left;
+    font-size: 15px;
+    transform: translateY(-50%);
+    transition: ease all 0.5s;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 25px;
+    transition: 0.2s ease all;
 }
 
 .btn-2 {
@@ -151,6 +162,22 @@ option{
     cursor: pointer;
     font-weight: 700;
     font-size: 20px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.input-error {
+    border: 1px solid red;
 }
 
 .main-1 {
@@ -308,8 +335,8 @@ option{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding-bottom: 20px;
-    height: 1100px;
+    padding-bottom: 50px;
+    height: auto;
     background-color: black;
     margin-top: 8px;
     transition: height 0.3s ease;
@@ -357,10 +384,14 @@ option{
     font-weight: 100;
 }
 
+.cross {
+    display: none;
+}
+
 .answer {
     display: none;
     width: 62%;
-    margin-top: 8px;
+    margin-top: 1px;
     background-color: #333333;
     color: white;
     padding: 30px;
@@ -391,64 +422,6 @@ option{
     color: white;
 }
 
-.email.low{
-    position: absolute;
-    top: calc(39% + 100px); 
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    justify-content: center; 
-}
-
-.input-2{
-    width: 300px;
-    height: 30px;
-    margin-right: 10px;
-    background-color: rgba(0, 0, 0, 0.473);
-    border: 1px solid #474747;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-    text-align: left;
-    padding: 10px;
-    font-size: 17px;
-    text-align: left;
-    transition: ease all 0.5s;
-    position: relative;
-}
-
-.input-2::placeholder {
-    color: rgb(184, 184, 184);
-    font-size: 15px;
-    transition: ease all 0.5s;
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
- 
-}
-
-.input-2:focus::placeholder {
-    color: rgb(184, 184, 184);
-    transform: translateY(-150%) scale(0.9);
-    text-align: left;
-}
-
-.btn-3{
-    position: relative;
-    top: 2px;
-    width: 180px;
-    height: 52px;
-    background: red;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 20px;
-}
-
 .footer{
     display: flex;
     align-items: center;
@@ -460,7 +433,7 @@ option{
     height: 400px;
 }
 
-.kk{
+.all{
     margin: 20px;
     display: flex;
     align-items: center;
@@ -470,10 +443,10 @@ option{
     cursor: pointer;
 }
 
-.kk .block1 p,
-.kk .block2 p,
-.kk .block3 p,
-.kk .block4 p {
+.all .block1 p,
+.all .block2 p,
+.all .block3 p,
+.all .block4 p {
     margin-bottom: 20px;
 }
 

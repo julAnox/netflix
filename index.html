@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="icon" href="/img/short-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -31,10 +32,13 @@
             <p class="title-3">Ready to watch? Enter your email to create or restart your membership.</p>
         </div>
         <div class="low">
-            <input type="text" placeholder="Email adress" class="input-1">
-            <span class="error-message" id="emailErrorMessage"></span>
-            <button class="btn-2">Get Started ></button>
-        </div>
+            <div class="input-container">
+                <input type="text" class="input-1" id="emailInput">
+                <span class="floating-label">Email address</span>
+                <span class="error-message" id="emailErrorMessage"></span>
+            </div>
+            <button class="btn-2" id="submitButton">Get Started ></button>
+        </div>             
     </header>
 
     <div class="main-1">
@@ -78,7 +82,8 @@
         <h2 class="questions-title">Frequently Asked Questions</h2>
         <div class="questions-info" onclick="toggleAnswer('answer1')">
             <h2 class="questions-h2-title">What is Netflix?</h2>
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined plus">add</span>
+            <span class="material-symbols-outlined cross">close</span>
         </div>
         <div id="answer1" class="answer">
             <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,<br>
@@ -90,7 +95,8 @@
 
         <div class="questions-info" onclick="toggleAnswer('answer2')">
             <h2 class="questions-h2-title">How much does Netflix cost?</h2>
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined plus">add</span>
+            <span class="material-symbols-outlined cross">close</span>
         </div>
         <div id="answer2" class="answer">
             <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed<br>
@@ -99,7 +105,8 @@
 
         <div class="questions-info" onclick="toggleAnswer('answer3')">
             <h2 class="questions-h2-title">Where can I watch?</h2>
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined plus">add</span>
+            <span class="material-symbols-outlined cross">close</span>
         </div>
         <div id="answer3" class="answer">
             <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com<br>
@@ -111,7 +118,8 @@
 
         <div class="questions-info" onclick="toggleAnswer('answer4')">
             <h2 class="questions-h2-title">How do I cancel?</h2>
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined plus">add</span>
+            <span class="material-symbols-outlined cross">close</span>
         </div>
         <div id="answer4" class="answer">
             <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your<br>
@@ -120,7 +128,8 @@
 
         <div class="questions-info" onclick="toggleAnswer('answer5')">
             <h2 class="questions-h2-title">What can I watch on Netflix?</h2>
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined plus">add</span>
+            <span class="material-symbols-outlined cross">close</span>
         </div>
         <div id="answer5" class="answer">
             <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning<br>
@@ -129,7 +138,8 @@
 
         <div class="questions-info" onclick="toggleAnswer('answer6')">
             <h2 class="questions-h2-title">Is Netflix good for kids?</h2>
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined plus">add</span>
+            <span class="material-symbols-outlined cross">close</span>
         </div>
         <div id="answer6" class="answer">
             <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy<br>
@@ -140,7 +150,8 @@
 
         <div class="questions-info" onclick="toggleAnswer('answer7')">
             <h2 class="questions-h2-title">Why am I seeing this language?</h2>
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined plus">add</span>
+            <span class="material-symbols-outlined cross">close</span>
         </div>
         <div id="answer7" class="answer">
             <p>Your browser preferences determine the language shown here.</p>
@@ -149,14 +160,18 @@
         <div class="low-info">
             <p class="low-rdy">Ready to watch? Enter your email to create or restart your membership.</p>
         </div>
-        <div class="email-low">
-            <input type="text" placeholder="Email adress" class="input-2">
-            <button class="btn-3">Get Started ></button>
-        </div>
+        <div class="low-email">
+            <div class="input-container">
+                <input type="text" class="input-1" id="emailInput1">
+                <span class="floating-label">Email address</span>
+                <span class="error-message" id="emailErrorMessage-1"></span>
+            </div>
+            <button class="btn-2" id="submitButton">Get Started ></button>
+        </div> 
     </div>
 
     <div class="footer" id="footer">
-        <div class="kk">
+        <div class="all">
             <div class="block1">
                 <p class="size-up">Questions? Contact us</p>
                 <p>FAQ</p>
@@ -191,6 +206,10 @@
         </select>
         <p class="low-text">Netflix Belarus</p>
     </div>
+
     <script src="answer.js"></script>
+    <script src="email.js"></script>
+    <script src="input.js"></script>
+    <script src="swap.js"></script>
 </body>
 </html>
