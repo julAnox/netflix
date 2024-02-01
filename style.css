@@ -176,8 +176,20 @@ option{
     left: 0;
 }
 
+.valid-message{
+    color: rgb(0, 255, 0);
+    font-size: 13px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
 .input-error {
     border: 1px solid red;
+}
+
+.input-success{
+    border: 1px solid rgb(0, 255, 0);
 }
 
 .main-1 {
@@ -397,7 +409,7 @@ option{
     padding: 30px;
     font-weight: 500;
     font-size: 23px;
-    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: ease all 0.7s;
 }
 
 .answer.active {
